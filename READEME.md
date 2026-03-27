@@ -7,7 +7,7 @@ The following detail what the scripts function are for this repo when migrating 
 
 **`extensions.sh`** will generate the create extension sql’s of existing extension on the source server to be used on the target server. 
 
-**`aggreagatesPg9.sh`**will run against the Postgres 9 database instance, identify custom aggregate functions with incompatible types , generate a sql to drop and recreate them on the target server.  Do not run this until you modify the generated sql to include the proper object type.  This is just to make life easy and not have to find all the function definitions.
+**`aggreagatesPg9.sh`** will run against the Postgres 9 database instance, identify custom aggregate functions with incompatible types , generate a sql to drop and recreate them on the target server.  Do not run this until you modify the generated sql to include the proper object type.  This is just to make life easy and not have to find all the function definitions.
 
 **`aggregatesPg11.sh`** which can be used for testing against postgres versions >= 11.
 oidchecks.sh will find tables that use old OID’s and generate the necessary alter table commands to make them compatible with newer versions of Postgres.
